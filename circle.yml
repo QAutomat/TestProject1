@@ -4,5 +4,5 @@ test:
   
 general:
   artifacts:
-    - "reports"
+    - "reports" 
     
