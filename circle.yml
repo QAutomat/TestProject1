@@ -1,13 +1,8 @@
 test:
   override:
-    - pybot -n non-critical -d "target" ./TestSuite1.robot 
-  post:
-    - mkdir -p $CIRCLE_TEST_REPORTS/junit/
-    - find . -type f -regex ".*/target/.*xml" -exec cp {} $CIRCLE_TEST_REPORTS/junit/ \;
-
-
+    - pybot -T -d reports -n noncritical ./TestSuite.robot
+  
 general:
   artifacts:
-    - $CIRCLE_TEST_REPORTS
-    - "target"
+    - "reports"
     
