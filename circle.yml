@@ -1,6 +1,6 @@
 test:
   override:
-    - pybot -T -d reports -n noncritical ./TestSuite1.robot
+    - pybot -T -d /Users/admin/Documents/reports -n noncritical ./TestSuite1.robot
   
 general:
   artifacts:
