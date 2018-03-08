@@ -1,8 +1,13 @@
 test:
   override:
     - pybot -T -d reports -n noncritical ./TestSuite1.robot
+    - store_test_results:
+        path: /tmp/test-results
+
   
 general:
   artifacts:
     - "reports" 
+    
+
    
