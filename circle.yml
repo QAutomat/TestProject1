@@ -1,7 +1,6 @@
 test:
   override:
     - pybot -T -d reports -n noncritical ./TestSuite1.robot
-    - find . -type f -regex ".*/reports/.*xml" -exec cp {} curl https://circleci.com/api/v1.1/project/github/QAutomat/TestProject1/latest/artifacts?circle-token=$CIRCLE_TOKEN | grep -o 'https://[^"]*' > /Users/admin/Documents/artifacts.txt;
 
 general:
   artifacts:
